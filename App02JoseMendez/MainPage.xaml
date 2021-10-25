@@ -11,6 +11,17 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblUsuario" Grid.Row="0" Grid.Column="0"/>
+            <Label x:Name="lblContraseña" Grid.Row="0" Grid.Column="1"/>
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>

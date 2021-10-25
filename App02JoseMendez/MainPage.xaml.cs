@@ -10,17 +10,14 @@ namespace App02JoseMendez
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        public MainPage(string usuario, string contraseña)
         {
             InitializeComponent();
+            lblUsuario.Text = "Usuario: " + usuario;
+            lblContraseña.Text = contraseña;
         }
-        private void limpiarCampos()
-        {
-            txtValorS1.Text = "";
-            txtValorE1.Text = "";
-            txtValorS2.Text = "";
-            txtValorE2.Text = "";
-        }
+        
+        
 
         private void btnVerificar_Clicked(object sender, EventArgs e)
         {
@@ -28,7 +25,7 @@ namespace App02JoseMendez
             double exam1 = Convert.ToDouble(txtValorE1.Text);
             double nota2 = Convert.ToDouble(txtValorS2.Text);
             double exam2 = Convert.ToDouble(txtValorE2.Text);
-            //, examen1, nota2, examen2;
+            
             try
             {
                 if (nota1 >= 0 && nota1 < 10.1 && exam1 >= 0 && exam1 < 10.01)
@@ -62,15 +59,15 @@ namespace App02JoseMendez
                     }
                     else
                     {
-                        DisplayAlert("ERROR", nota1.ToString(), "ok");
+                        DisplayAlert("ERROR", "El " + nota2.ToString() + " sobrepasa el Valor", "ok");
                     }
                 }
                 else
                 {
-                    DisplayAlert("ERROR", nota2.ToString(), "ok");
+                    DisplayAlert("ERROR", "El " + nota1.ToString() + " sobrepasa el Valor", "ok");
                 }
 
-                limpiarCampos();
+               
 
             }
             catch (Exception ex)

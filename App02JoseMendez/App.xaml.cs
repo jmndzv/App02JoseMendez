@@ -10,7 +10,7 @@ namespace App02JoseMendez
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Vista());
         }
 
         protected override void OnStart()
